@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        {% if message %}
+            <div class="message {% if message == 'Login feito com sucesso!' %}success{% endif %}">{{ message }}</div>
+        {% endif %}
+        <form method="post">
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required autofocus>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            <button type="submit" class="btn">Entrar</button>
+        </form>
+        <a href="/esqueci-senha" class="forgot-link">Esqueci minha senha</a>
+    </div>
+</body>
+</html>
